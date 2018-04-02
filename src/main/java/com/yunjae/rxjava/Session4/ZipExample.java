@@ -17,6 +17,8 @@ public class ZipExample {
         zip();
         System.out.println("-----------------------------");
         zipInterval();
+        System.out.println("-----------------------------");
+        zipWith();
     }
 
     private static void zip() {
@@ -45,5 +47,16 @@ public class ZipExample {
         CommonUtils.exampleStart();
         source.subscribe(Log::it);
         CommonUtils.sleep(1000);
+    }
+
+    private static void zipWith() {
+        Observable<Integer> source = Observable
+            .zip(
+                Observable.just(100,200,300),
+                Observable.just(10, 20, 30),
+                (a, b) -> a + b)
+            .zipWith(Observable.just(1,2,3), (ab, c) -> ab +c);
+
+        source.subscribe(Log::i);
     }
 }

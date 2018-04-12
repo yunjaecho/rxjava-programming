@@ -15,6 +15,13 @@
             <version>2.1.10</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.github.akarnokd/rxjava2-extensions -->
+        <dependency>
+            <groupId>com.github.akarnokd</groupId>
+            <artifactId>rxjava2-extensions</artifactId>
+            <version>0.18.9</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
